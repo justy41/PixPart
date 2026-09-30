@@ -5,7 +5,7 @@ using NativeFileDialogSharp;
 
 namespace HelloWorld;
 
-// TODO: Fix Spritesheet export
+// TODO: Fix Spritesheet export to actually export something, not just a blank png file
 
 internal static class Program {
     // STAThread is required if you deploy using NativeAOT on Windows
