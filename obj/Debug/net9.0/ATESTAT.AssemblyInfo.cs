@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ATESTAT")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b19204e5ca3b65c105eb46d29932b127fd421afc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6156ceb697d6fa8a3b6ad740a144e88705b0127d")]
 [assembly: System.Reflection.AssemblyProductAttribute("ATESTAT")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ATESTAT")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
