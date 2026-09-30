@@ -5,7 +5,7 @@ using NativeFileDialogSharp;
 
 namespace HelloWorld;
 
-// TODO: Fix exports and color variables imgui
+// TODO: Fix Spritesheet export
 
 internal static class Program {
     // STAThread is required if you deploy using NativeAOT on Windows
