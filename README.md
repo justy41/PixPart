@@ -1,5 +1,5 @@
 <p align="center">
-<img src="media/logo-export.png">
+<img src="media/logo-export.png", width=928, height=272>
 </p>
 
 <h1 align="center">Straightforward particle visualisation</h1>
