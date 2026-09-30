@@ -39,3 +39,4 @@ C:\Users\Iustin\Documents\SCOALA\INFO\ATESTAT\bin\Debug\net9.0\runtimes\win-x86\
 C:\Users\Iustin\Documents\SCOALA\INFO\ATESTAT\bin\Debug\net9.0\runtimes\win-x86\native\nfd.exp
 C:\Users\Iustin\Documents\SCOALA\INFO\ATESTAT\bin\Debug\net9.0\runtimes\win-x86\native\nfd.lib
 C:\Users\Iustin\Documents\SCOALA\INFO\ATESTAT\bin\Debug\net9.0\runtimes\win-x86\native\nfd.pdb
+C:\Users\Iustin\Documents\SCOALA\INFO\ATESTAT\obj\Debug\net9.0\ATESTAT.sourcelink.json
