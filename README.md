@@ -29,3 +29,4 @@ Since the project is just a simple particle generator visualizer it doesn't prov
 You'll have to write your own importer (don't worry, it's just simple json data ;)).
 
 ## Showcase
+https://github.com/user-attachments/assets/0947536d-67c8-49ca-aafe-7c7a234c9fa1
