@@ -28,6 +28,4 @@ After you are done, hit the <b>Save</b> button down bellow and give the .json fi
 Since the project is just a simple particle generator visualizer it doesn't provide ways to import the particles into a Game Engine or Framework.
 You'll have to write your own importer (don't worry, it's just simple json data ;)).
 
-<p align="center">
-  <img src="media/ss.png">
-</p>
+## Showcase
