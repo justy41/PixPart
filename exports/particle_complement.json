@@ -1,0 +1,21 @@
+{
+  "EmissionRate": 102.422,
+  "AngleMin": 20,
+  "AngleMax": 160,
+  "SpeedMin": 71,
+  "SpeedMax": 105,
+  "Gravity": 31.945,
+  "LifetimeMin": 1.85,
+  "LifetimeMax": 1.85,
+  "SizeMin": 2,
+  "SizeMax": 43,
+  "TextureID": 4,
+  "StartR": 162,
+  "StartG": 252,
+  "StartB": 70,
+  "StartA": 255,
+  "EndR": 193,
+  "EndG": 96,
+  "EndB": 246,
+  "EndA": 0
+}

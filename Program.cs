@@ -22,9 +22,13 @@ internal static class Program {
         using var textures = new TextureLibrary();
         textures.Load(0, "src/Textures/particle.png");
         textures.Load(1, "src/Textures/leaf.png");
+        textures.Load(2, "src/Textures/stick.png");
+        textures.Load(3, "src/Textures/snow.png");
+        textures.Load(4, "src/Textures/blob.png");
         var particleRenderer = new ParticleRenderer(textures);
         
         var editorUI = new EditorUI(config);
+        EditorUI.SetupCatppuccinMochaTheme();
                 
         while (!Raylib.WindowShouldClose()) {
             float deltaTime = Raylib.GetFrameTime();

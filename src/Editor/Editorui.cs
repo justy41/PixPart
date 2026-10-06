@@ -1,3 +1,4 @@
+using System.Numerics;
 using ImGuiNET;
 
 public class EditorUI {
@@ -50,5 +51,132 @@ public class EditorUI {
             b = (int)(color.Z*255);
             a = (int)(color.W*255);
         }
+    }
+    
+    public static void SetupCatppuccinMochaTheme() {
+        ImGuiStylePtr style = ImGui.GetStyle();
+
+        // Catppuccin Mocha Palette
+        // --------------------------------------------------------
+        Vector4 baseColor = new(0.117f, 0.117f, 0.172f, 1.0f); // #1e1e2e
+        Vector4 mantle     = new(0.109f, 0.109f, 0.156f, 1.0f); // #181825
+        Vector4 surface0   = new(0.200f, 0.207f, 0.286f, 1.0f); // #313244
+        Vector4 surface1   = new(0.247f, 0.254f, 0.337f, 1.0f); // #3f4056
+        Vector4 surface2   = new(0.290f, 0.301f, 0.388f, 1.0f); // #4a4d63
+        Vector4 overlay0   = new(0.396f, 0.403f, 0.486f, 1.0f); // #65677c
+        Vector4 overlay2   = new(0.576f, 0.584f, 0.654f, 1.0f); // #9399b2
+        Vector4 text       = new(0.803f, 0.815f, 0.878f, 1.0f); // #cdd6f4
+        Vector4 subtext0   = new(0.639f, 0.658f, 0.764f, 1.0f); // #a3a8c3
+        Vector4 mauve      = new(0.796f, 0.698f, 0.972f, 1.0f); // #cba6f7
+        Vector4 peach      = new(0.980f, 0.709f, 0.572f, 1.0f); // #fab387
+        Vector4 yellow     = new(0.980f, 0.913f, 0.596f, 1.0f); // #f9e2af
+        Vector4 green      = new(0.650f, 0.890f, 0.631f, 1.0f); // #a6e3a1
+        Vector4 teal       = new(0.580f, 0.886f, 0.819f, 1.0f); // #94e2d5
+        Vector4 sapphire   = new(0.458f, 0.784f, 0.878f, 1.0f); // #74c7ec
+        Vector4 blue       = new(0.533f, 0.698f, 0.976f, 1.0f); // #89b4fa
+        Vector4 lavender   = new(0.709f, 0.764f, 0.980f, 1.0f); // #b4befe
+
+        // Main window and backgrounds
+        style.Colors[(int)ImGuiCol.WindowBg]              = baseColor;
+        style.Colors[(int)ImGuiCol.ChildBg]               = baseColor;
+        style.Colors[(int)ImGuiCol.PopupBg]               = surface0;
+        style.Colors[(int)ImGuiCol.Border]                = surface1;
+        style.Colors[(int)ImGuiCol.BorderShadow]          = new Vector4(0, 0, 0, 0);
+
+        style.Colors[(int)ImGuiCol.FrameBg]               = surface0;
+        style.Colors[(int)ImGuiCol.FrameBgHovered]        = surface1;
+        style.Colors[(int)ImGuiCol.FrameBgActive]         = surface2;
+
+        style.Colors[(int)ImGuiCol.TitleBg]               = mantle;
+        style.Colors[(int)ImGuiCol.TitleBgActive]         = surface0;
+        style.Colors[(int)ImGuiCol.TitleBgCollapsed]      = mantle;
+        style.Colors[(int)ImGuiCol.MenuBarBg]             = mantle;
+
+        style.Colors[(int)ImGuiCol.ScrollbarBg]           = surface0;
+        style.Colors[(int)ImGuiCol.ScrollbarGrab]         = surface2;
+        style.Colors[(int)ImGuiCol.ScrollbarGrabHovered]  = overlay0;
+        style.Colors[(int)ImGuiCol.ScrollbarGrabActive]   = overlay2;
+
+        style.Colors[(int)ImGuiCol.CheckMark]             = green;
+        style.Colors[(int)ImGuiCol.SliderGrab]            = sapphire;
+        style.Colors[(int)ImGuiCol.SliderGrabActive]      = blue;
+
+        style.Colors[(int)ImGuiCol.Button]                = surface0;
+        style.Colors[(int)ImGuiCol.ButtonHovered]         = surface1;
+        style.Colors[(int)ImGuiCol.ButtonActive]          = surface2;
+
+        style.Colors[(int)ImGuiCol.Header]                = surface0;
+        style.Colors[(int)ImGuiCol.HeaderHovered]         = surface1;
+        style.Colors[(int)ImGuiCol.HeaderActive]          = surface2;
+
+        style.Colors[(int)ImGuiCol.Separator]             = surface1;
+        style.Colors[(int)ImGuiCol.SeparatorHovered]      = mauve;
+        style.Colors[(int)ImGuiCol.SeparatorActive]       = mauve;
+
+        style.Colors[(int)ImGuiCol.ResizeGrip]             = surface2;
+        style.Colors[(int)ImGuiCol.ResizeGripHovered]      = mauve;
+        style.Colors[(int)ImGuiCol.ResizeGripActive]       = mauve;
+
+        style.Colors[(int)ImGuiCol.Tab]                   = surface0;
+        style.Colors[(int)ImGuiCol.TabHovered]            = surface2;
+        style.Colors[(int)ImGuiCol.TabSelected]           = surface1;
+        style.Colors[(int)ImGuiCol.TabDimmed]             = surface0;
+        style.Colors[(int)ImGuiCol.TabDimmedSelected]     = surface1;
+
+        style.Colors[(int)ImGuiCol.DockingPreview]        = sapphire;
+        style.Colors[(int)ImGuiCol.DockingEmptyBg]        = baseColor;
+
+        style.Colors[(int)ImGuiCol.PlotLines]              = blue;
+        style.Colors[(int)ImGuiCol.PlotLinesHovered]       = peach;
+        style.Colors[(int)ImGuiCol.PlotHistogram]          = teal;
+        style.Colors[(int)ImGuiCol.PlotHistogramHovered]   = green;
+
+        style.Colors[(int)ImGuiCol.TableHeaderBg]          = surface0;
+        style.Colors[(int)ImGuiCol.TableBorderStrong]     = surface1;
+        style.Colors[(int)ImGuiCol.TableBorderLight]      = surface0;
+        style.Colors[(int)ImGuiCol.TableRowBg]             = new Vector4(0, 0, 0, 0);
+        style.Colors[(int)ImGuiCol.TableRowBgAlt]          = new Vector4(1, 1, 1, 0.06f);
+
+        style.Colors[(int)ImGuiCol.TextSelectedBg]         = surface2;
+        style.Colors[(int)ImGuiCol.DragDropTarget]         = yellow;
+        style.Colors[(int)ImGuiCol.NavWindowingHighlight]  = lavender;
+
+        style.Colors[(int)ImGuiCol.NavWindowingHighlight] =
+            new Vector4(1.0f, 1.0f, 1.0f, 0.7f);
+
+        style.Colors[(int)ImGuiCol.NavWindowingDimBg] =
+            new Vector4(0.8f, 0.8f, 0.8f, 0.2f);
+
+        style.Colors[(int)ImGuiCol.ModalWindowDimBg] =
+            new Vector4(0, 0, 0, 0.35f);
+
+        style.Colors[(int)ImGuiCol.Text]         = text;
+        style.Colors[(int)ImGuiCol.TextDisabled] = subtext0;
+
+        // Rounded corners
+        style.WindowRounding    = 6.0f;
+        style.ChildRounding     = 6.0f;
+        style.FrameRounding     = 4.0f;
+        style.PopupRounding     = 4.0f;
+        style.ScrollbarRounding = 9.0f;
+        style.GrabRounding      = 4.0f;
+        style.TabRounding       = 4.0f;
+
+        // Padding and spacing
+        style.WindowPadding    = new Vector2(8.0f, 8.0f);
+        style.FramePadding     = new Vector2(5.0f, 3.0f);
+        style.ItemSpacing      = new Vector2(8.0f, 4.0f);
+        style.ItemInnerSpacing = new Vector2(4.0f, 4.0f);
+
+        style.IndentSpacing = 21.0f;
+        style.ScrollbarSize = 14.0f;
+        style.GrabMinSize   = 10.0f;
+
+        // Borders
+        style.WindowBorderSize = 1.0f;
+        style.ChildBorderSize  = 1.0f;
+        style.PopupBorderSize  = 1.0f;
+        style.FrameBorderSize  = 0.0f;
+        style.TabBorderSize    = 0.0f;
     }
 }
