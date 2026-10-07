@@ -53,36 +53,40 @@ internal static class Program {
     }
     
     static void DrawExportPanel(EmitterConfig config, ParticleRenderer renderer) {
-        ImGui.Begin("Export");
-        
-        if(ImGui.Button("Save Config as JSON")) {
-            DialogResult result = Dialog.FileSave("json");
+        if(ImGui.BeginMainMenuBar()) {
+            if(ImGui.BeginMenu("File")) {
+                if(ImGui.Button("Save Config as JSON")) {
+                    DialogResult result = Dialog.FileSave("json");
+                    
+                    if(result.IsOk) {
+                        JsonExporter.Save(config, result.Path+".json");
+                    }
+                }
+                
+                if(ImGui.Button("Export Spritesheet (60 frames)")) {
+                    ExportSpritesheet(config, renderer, frameCount: 60, columns: 8);
+                }
+                
+                ImGui.Spacing();
+                ImGui.Separator();
+                ImGui.Spacing();
+                
+                if(ImGui.Button("Load Config as JSON")) {
+                    DialogResult result = Dialog.FileOpen("json");
+                    
+                    if(result.IsOk) {
+                        JsonExporter.LoadInto(config, result.Path);
+                    }
+                    else if(result.IsError) {
+                        Console.WriteLine($"File dialog error: {result.ErrorMessage}");
+                    }
+                }
+                
+                ImGui.EndMenu();
+            }
             
-            if(result.IsOk) {
-                JsonExporter.Save(config, result.Path+".json");
-            }
+            ImGui.EndMainMenuBar();
         }
-        
-        if(ImGui.Button("Export Spritesheet (60 frames)")) {
-            ExportSpritesheet(config, renderer, frameCount: 60, columns: 8);
-        }
-        
-        ImGui.Spacing();
-        ImGui.Separator();
-        ImGui.Spacing();
-        
-        if(ImGui.Button("Load Config as JSON")) {
-            DialogResult result = Dialog.FileOpen("json");
-            
-            if(result.IsOk) {
-                JsonExporter.LoadInto(config, result.Path);
-            }
-            else if(result.IsError) {
-                Console.WriteLine($"File dialog error: {result.ErrorMessage}");
-            }
-        }
-        
-        ImGui.End();
     }
     
     static void ExportSpritesheet(EmitterConfig config, ParticleRenderer renderer, int frameCount, int columns) {
