@@ -15,8 +15,12 @@ It's built with C# and [raylib](https://www.raylib.com/) using the [Raylib-cs bi
 <br>
 
 <p align="center">
-  <img src="media/ss_water.png", width=837, height=571>
+  <img src="media/ss_water.png">
 </p>
+
+<br>
+
+[![Architecture diagram of justy41/pixpart](https://gitdiagram.com/justy41/pixpart/diagram.png)](https://gitdiagram.com/justy41/pixpart?utm_source=readme&utm_medium=picture)
 
 ## How to use it?
 After you have installed the source code, run a ```dotnet restore``` in the command line. Open it in Visual Studio Code, or any other IDE that is able to handle C# projects, and run the ```dotnet run``` command in the terminal.
