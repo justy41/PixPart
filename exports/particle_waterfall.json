@@ -1,0 +1,22 @@
+{
+  "EmissionRate": 106.111,
+  "AngleMin": 70,
+  "AngleMax": 110,
+  "SpeedMin": 211,
+  "SpeedMax": 211,
+  "Gravity": 200,
+  "LifetimeMin": 1,
+  "LifetimeMax": 3.85,
+  "SizeMin": 19.5,
+  "SizeMax": 19.5,
+  "TextureID": 4,
+  "TexturePath": "src/Textures/blob.png",
+  "StartR": 0,
+  "StartG": 187,
+  "StartB": 255,
+  "StartA": 255,
+  "EndR": 0,
+  "EndG": 52,
+  "EndB": 255,
+  "EndA": 0
+}

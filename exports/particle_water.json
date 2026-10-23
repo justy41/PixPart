@@ -10,6 +10,7 @@
   "SizeMin": 2,
   "SizeMax": 43,
   "TextureID": 0,
+  "TexturePath": "src/Textures/particle.png",
   "StartR": 0,
   "StartG": 157,
   "StartB": 255,

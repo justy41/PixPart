@@ -41,7 +41,7 @@ internal static class Program {
             
             rlImGui.Begin();
             editorUI.Draw();
-            DrawExportPanel(config, particleRenderer);
+            DrawExportPanel(config, particleRenderer, textures);
             DrawDiagnosticsPanel(liveSimulation);
             rlImGui.End();
 
@@ -52,13 +52,14 @@ internal static class Program {
         Raylib.CloseWindow();
     }
     
-    static void DrawExportPanel(EmitterConfig config, ParticleRenderer renderer) {
+    static void DrawExportPanel(EmitterConfig config, ParticleRenderer renderer, TextureLibrary textures) {
         if(ImGui.BeginMainMenuBar()) {
             if(ImGui.BeginMenu("File")) {
                 if(ImGui.Button("Save Config as JSON")) {
                     DialogResult result = Dialog.FileSave("json");
                     
                     if(result.IsOk) {
+                        config.TexturePath = textures.GetTexturePath(config.TextureID);
                         JsonExporter.Save(config, result.Path+".json");
                     }
                 }

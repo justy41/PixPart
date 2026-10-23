@@ -10,6 +10,7 @@
   "SizeMin": 2,
   "SizeMax": 43,
   "TextureID": 4,
+  "TexturePath": "src/Textures/blob.png",
   "StartR": 162,
   "StartG": 252,
   "StartB": 70,
