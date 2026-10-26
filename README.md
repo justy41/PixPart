@@ -37,3 +37,7 @@ You'll have to write your own importer (don't worry, it's just simple json data 
 
 ## Showcase
 https://github.com/user-attachments/assets/0947536d-67c8-49ca-aafe-7c7a234c9fa1
+
+Particle model was imported using a custom importer inside a Raylib-cs custom engine.
+
+https://github.com/user-attachments/assets/3242e8d2-6fb9-413f-8cad-20922e2ce37f
